@@ -18,3 +18,70 @@
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+#AkanNameForm{
+    padding: 28px 30px;
+    border-radius: 14px;
+    background-color: aqua;
+    box-shadow: 0 12px 30px;
+}
+
+#AkanNameForm{
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px 40px;
+    background: #4ecdc4;
+    font-size: 18px;
+    border-radius: 15px;
+}
+ #AkanNameForm label{
+    color: #003b3b;
+    margin-right: 8px;
+    font-size: 18px;
+    font-weight: bold;
+ }
+
+ #AkanNameForm input[type="number"]{
+    width:180px;
+    height: 45px;
+    padding:8px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius:8px;
+ }
+
+ #AkanNameForm > label
+ #AkanNameForm > input{
+    margin-bottom: 12px;
+ }
+
+ #AkanNameForm div{
+    margin-top: 15px;
+    margin-bottom: 20px;
+ }
+
+ #AkanNamForm input[type="radio"]{
+    transform: scale(1.2);
+    margin-right: 5px:
+ }
+
+ #AkanNameForm button{
+    background: #ffbe0b;
+    color: #333;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    margin-top: 20px;
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: bold;
+ }
+
+ #Welcoming{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: hotpink;
+ }
