@@ -1,11 +1,11 @@
-document.getElementById("AkanNameForm").addEventListener("submit") Event.preventDefault()
+document.getElementById("AkanNameForm").addEventListener("submit", function(event){event.preventDefault()};
 
-const day = parseInt(document.getElementbyId("day").value);
+const day = parseInt(document.getElementById("day").value);
 const month = parseInt(document.getElementById("month").value);
 const year = parseInt(document.getElementById("year").value);
 const gender = document.querySelector(`input[name="gender"]:checked`)
 
-if(isValidDate(day,month,year)){
+if(!isValidDate(day,month,year)){
     alert("Kindly enter a valid date!Thank you!");
     return;
 }
@@ -72,6 +72,6 @@ if(gender === null){
  ? maleNames[dayIndex]
  : femaleNames[dayIndex];
 
- document.g
+ document.getElementbyId("result").textContent = `Your Beautiful Akan Name is ${akanName}!`
 
 
