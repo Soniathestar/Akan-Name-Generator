@@ -1,4 +1,6 @@
 # Project Name
+  This project by the title Akan Name Generator
+  
 #Project description
 #Author information
 #Setup instruction
