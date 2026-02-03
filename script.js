@@ -9,12 +9,12 @@ document.getElementById("AkanNameForm").addEventListener("submit", function (e) 
     const resultDiv = document.getElementById("result");
 
     if (!gender) {
-        resultDiv.innerHTML = "⚠️ Please select your gender.Thank you!";
+        resultDiv.innerHTML = "Please select your gender.Thank you!";
         return;
     }
 
     if (day < 1 || day > 31 || month < 1 || month > 12) {
-        resultDiv.innerHTML = "⚠️ Please enter a valid date.Thank you!";
+        resultDiv.innerHTML = "Please enter a valid date.Thank you!";
         return;
     }
 
@@ -57,7 +57,7 @@ document.getElementById("AkanNameForm").addEventListener("submit", function (e) 
             : femaleNames[weekDay];
 
     resultDiv.innerHTML = `
-        🎉 You were born on a <strong>${days[weekDay]}</strong>.<br>
-        🌍 Your Akan name is <strong>${akanName}</strong>!
+        🎉You were born on a <strong>${days[weekDay]}</strong>.<br>
+        Your Akan name is <strong>${akanName}</strong>!
     `;
 });
