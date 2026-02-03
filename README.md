@@ -4,6 +4,10 @@
 # Project description
 This project allows a  user to discover their Akan Names by inputing their date of birth and their gender! This project is fully inspired by the need to learn and appreciate ach others culture.
 
+# Live link
+Click on this link to get to my live page
+
+
 # Author information
 This project is brought to you by Sonia Ngaruiya
 Reach me on my email address for any inquiries 
@@ -29,5 +33,15 @@ The website allows the user to input their birth dates and their gender in order
 The website allows does not allow the user to input invalid dates and ensures that the user fills out all the fields before the name is generated
 
 # Technologies
-#Contact information
-#License and copyright information
+HTML
+CSS
+JavaScript
+
+# Contact information
+For any feedback or any concerns, feel free to contact me on my hotline at 0702648179
+
+# License and copyright information
+© 2026
+SONIA NGARUIYA
+
+LICENSED BY THE MIT
