@@ -1,77 +1,63 @@
-document.getElementById("AkanNameForm").addEventListener("submit", function(event){event.preventDefault()};
+document.getElementById("AkanNameForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-const day = parseInt(document.getElementById("day").value);
-const month = parseInt(document.getElementById("month").value);
-const year = parseInt(document.getElementById("year").value);
-const gender = document.querySelector(`input[name="gender"]:checked`)
+    const day = parseInt(document.getElementById("day").value);
+    const month = parseInt(document.getElementById("month").value);
+    const year = parseInt(document.getElementById("year").value);
+    const gender = document.querySelector('input[name="gender"]:checked');
 
-if(!isValidDate(day,month,year)){
-    alert("Kindly enter a valid date!Thank you!");
-    return;
-}
+    const resultDiv = document.getElementById("result");
 
-if(gender === null){
-    alert("Please select your gender!Thank you!");
-    return;
-}
- function isLeapYear(year){
-    return( year % 4 === 0 && year % 100 !==0) || (year % 400 === 0)
- }
-
- function calcDayofWeek(day, month, year)
- {
-    const CC = Math.floor(year/100);
-    const YY = year % 100;
-
-    const d = Math.floor(
-        (
-            (4 * CC - 2 * CC - 1) +
-            (5 * YY / 4) +
-            (26 *(month + 1) /10) +
-            day
-        ) % 7
-
-        return d;
-    )
-    function isValidDate(day, month, year)
-    {
-        const daysInMonth = [
-            31,
-            isLeapYear(year) ? 29:28,
-            31,
-            30,
-            31,
-            30,
-            31,
-            31,
-            30,
-            31,
-            30,
-            31,
-        ];
+    if (!gender) {
+        resultDiv.innerHTML = "⚠️ Please select your gender.Thank you!";
+        return;
     }
 
-    return(
-        Month >= 1 &&
-        month <= 12 &&
-        day>= 1 &&
-        day <= daysInMonth[month - 1]
-    );
- }
+    if (day < 1 || day > 31 || month < 1 || month > 12) {
+        resultDiv.innerHTML = "⚠️ Please enter a valid date.Thank you!";
+        return;
+    }
 
- const maleNames = [
-    "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw" , "Kofi" , "Kwame"
- ];
+    const birthDate = new Date(year, month - 1, day);
+    const weekDay = birthDate.getDay(); // 0 = Sunday, 6 = Saturday
 
- const femaleNames = [
-    "Akosua" , "Adwoa","Abenaa", "Akua", "Yaa", "Afua", "Ama"
- ];
+    const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+    ];
 
- const akanName = 
- gender.value === "male"
- ? maleNames[dayIndex]
- : femaleNames[dayIndex];
+    const maleNames = [
+        "Kwasi",
+        "Kwadwo",
+        "Kwabena",
+        "Kwaku",
+        "Yaw",
+        "Kofi",
+        "Kwame"
+    ];
 
- document.getElementbyId("result").textContent = `Your Beautiful Akan Name is ${akanName}!`
+    const femaleNames = [
+        "Akosua",
+        "Adwoa",
+        "Abenaa",
+        "Akua",
+        "Yaa",
+        "Afua",
+        "Ama"
+    ];
 
+    const akanName =
+        gender.value === "Male"
+            ? maleNames[weekDay]
+            : femaleNames[weekDay];
 
+    resultDiv.innerHTML = `
+        🎉 You were born on a <strong>${days[weekDay]}</strong>.<br>
+        🌍 Your Akan name is <strong>${akanName}</strong>!
+    `;
+});
