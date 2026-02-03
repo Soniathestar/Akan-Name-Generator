@@ -21,8 +21,13 @@ cd Akan-Name-Generator
 
 3. Open index.html on your browser
 
-4. Enter your date of birth and your gender! After that kindly click the "Get Akan Name button" at the end of the form
-#Behaviour Driven Developments
-#Technologies
+4. Enter your date of birth and your gender! After that kindly click the "See my Akan Name" at the end of the form to get your beautiful Akan Name
+
+# Behaviour Driven Developments
+The website allows the user to input their birth dates and their gender in order to discover their beautiful Akan Name
+
+The website allows does not allow the user to input invalid dates and ensures that the user fills out all the fields before the name is generated
+
+# Technologies
 #Contact information
 #License and copyright information
