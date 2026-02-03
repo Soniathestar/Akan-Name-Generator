@@ -7,6 +7,9 @@ This project allows a  user to discover their Akan Names by inputing their date 
 # Live link
 Click on this link to get to my live page
 
+https://soniathestar.github.io/Akan-Name-Generator/
+
+
 
 # Author information
 This project is brought to you by Sonia Ngaruiya
